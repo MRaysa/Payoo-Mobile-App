@@ -103,10 +103,10 @@
                             <!-- Input Fields -->
                             <fieldset class="space-y-3">
                                 <label class="font-medium">Bank Account Number</label>
-                                <input id="account-number" type="number" maxlength="11" class="input input-bordered w-full bg-white border-gray-400" placeholder="Enter 11 digit account number" required/>
+                                <input value="11234567895" id="account-number" type="number" maxlength="11" class="input input-bordered w-full bg-white border-gray-400" placeholder="Enter 11 digit account number" required/>
         
                                 <label class="font-medium">Amount to Add</label>
-                                <input id="amount" type="number" maxlength="11" class="input input-bordered w-full bg-white border-gray-400" placeholder="Add Amount to withdraw" required/>
+                                <input  id="amount" type="number" maxlength="11" class="input input-bordered w-full bg-white border-gray-400" placeholder="Add Amount to withdraw" required/>
         
                                 <label class="font-medium">Pin Number</label>
                                 <input value="1234" id="pin" type="password" class="input input-bordered w-full bg-white border-gray-400" placeholder="Enter 4 digit pin number" required/>
@@ -138,7 +138,7 @@
                             <!-- Input Fields -->
                             <fieldset class="space-y-3">
                                 <label class="font-medium">Agent Number</label>
-                                <input id="account-number" type="number" maxlength="11" class="input input-bordered w-full bg-white border-gray-400" placeholder="Enter 11 digit account number" required/>
+                                <input id="account-number-cashout" type="number" maxlength="11" class="input input-bordered w-full bg-white border-gray-400" placeholder="Enter 11 digit account number" required/>
         
                                 <label class="font-medium">Amount</label>
                                 <input id="cashout-amount" type="number" maxlength="11" class="input input-bordered w-full bg-white border-gray-400" placeholder="Enter amount to withdraw" required/>
@@ -161,10 +161,20 @@
         </section>
         
     </header>
+
+
+
+    <!-- added all js file-->
+
+
     <!-- <script src="./script/addMoney.js"></script> -->
-    <script src="./script/anotherWayAddMoney.js"></script>
-    <script src="./script/toggle.js"></script>
-    <script src="./script/cashout.js"></script>
+   <!--  <script src="./script/anotherWayAddMoney.js"></script> -->
+   <script src="./utlitiess/utilities.js"> </script>
+   <!-- <script src="./script/toggle.js"></script> -->
+   <script src="./utlitiess/toggle2.js"></script>
+    <!-- <script src="./script/cashout.js"></script> -->
+    <script src="./script/cashoutUsingUtility.js"></script>
+    <script src="./script/addMoneyWithShearedFunction.js"></script>
 
     
 </body>
