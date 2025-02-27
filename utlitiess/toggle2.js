@@ -3,7 +3,7 @@ document.getElementById("addmoney").style.display = "none";
 document.getElementById("transferMoney").style.display = "none";
 document.getElementById("getBonus").style.display = "none";
 document.getElementById("payBill").style.display = "none";
-document.getElementById("TransactionHistory").style.display = "none";
+document.getElementById("TransactionHistory").style.visibility = "hidden";
 
 //  add money 
 
@@ -14,7 +14,7 @@ document.getElementById("add-money-box").addEventListener("click",
         handleToggle("transferMoney","none");
         handleToggle("getBonus","none");
         handleToggle("payBill","none");
-        handleToggle("TransactionHistory","none");
+        handleTransactionToggle("TransactionHistory","hidden");
         handleToggle("LatestPayments","none");
     }
 )
@@ -28,7 +28,7 @@ document.getElementById("cash-out-box").addEventListener("click",
         handleToggle("transferMoney","none");
         handleToggle("getBonus","none");
         handleToggle("payBill","none");
-        handleToggle("TransactionHistory","none");
+        handleTransactionToggle("TransactionHistory","hidden");
         handleToggle("LatestPayments","none");
     }
 )
@@ -42,7 +42,7 @@ document.getElementById("transfer-money-box").addEventListener("click",
         handleToggle("transferMoney","block");
         handleToggle("getBonus","none");
         handleToggle("payBill","none");
-        handleToggle("TransactionHistory","none");
+        handleTransactionToggle("TransactionHistory","hidden");
         handleToggle("LatestPayments","none");
     }
 )
@@ -56,7 +56,7 @@ document.getElementById("get-bonus-box").addEventListener("click",
         handleToggle("transferMoney","none");
         handleToggle("getBonus","block");
         handleToggle("payBill","none");
-        handleToggle("TransactionHistory","none");
+        handleTransactionToggle("TransactionHistory","hidden");
         handleToggle("LatestPayments","none");
     }
 )
@@ -70,7 +70,7 @@ document.getElementById("pay-bill-box").addEventListener("click",
         handleToggle("transferMoney","none");
         handleToggle("getBonus","none");
         handleToggle("payBill","block");
-        handleToggle("TransactionHistory","none");
+        handleTransactionToggle("TransactionHistory","hidden");
         handleToggle("LatestPayments","none");
     }
 )
@@ -85,7 +85,7 @@ document.getElementById("transactions-box").addEventListener("click",
         handleToggle("transferMoney","none");
         handleToggle("getBonus","none");
         handleToggle("payBill","none");
-        handleToggle("TransactionHistory","block");
+        handleTransactionToggle("TransactionHistory","visible");
         handleToggle("LatestPayments","none");
     }
 )
@@ -93,3 +93,8 @@ document.getElementById("transactions-box").addEventListener("click",
 function handleToggle(id,status){
     document.getElementById(id).style.display = status;
 }
+
+function handleTransactionToggle(id,status){
+    document.getElementById(id).style.visibility = status;
+}
+

@@ -20,7 +20,7 @@
 </head>
 
 <body class="bg-slate-800 outfit">
-    <header class="max-w-md min-h-screen mx-auto py-6 bg-gray-200">
+    <header class=" relative max-w-md min-h-screen mx-auto py-6 bg-gray-200">
         <section class="">
             <!-- Header Part -->
             <div class="flex justify-between items-center">
@@ -29,7 +29,7 @@
                         <img src="./assets/Group.png" alt="">
                     </div>
                     <div>
-                        <h1 class="text-3xl font-bold text-[#080808E6]""> $ <span id=" main-balance">4500</span></h1>
+                        <h1 class="text-3xl font-bold text-[#080808E6]""> $ <span id="main-balance">4500</span></h1>
                         <p class="font-[400] text-[14px] text-[#08080880]">Available Balance</p>
                     </div>
                 </div>
@@ -89,10 +89,11 @@
                     <h2 class="text-xl font-bold text-[#080808E6]">Latest Payment</h2>
                     <p class="font-medium text-sm text-blue-600 cursor-pointer">View All</p>
                 </div>
-        
+
                 <div class="mt-5 flex flex-col gap-4">
                     <!-- Electricity Bill -->
-                    <div class="flex justify-between items-center bg-white border-l-4 border-yellow-500 px-4 py-3 rounded-md shadow-md">
+                    <div
+                        class="flex justify-between items-center bg-white border-l-4 border-yellow-500 px-4 py-3 rounded-md shadow-md">
                         <div class="flex items-center gap-4">
                             <div class="bg-gray-100 p-3 rounded-full">
                                 <img class="w-[25px]" src="./assets/wallet1.png" alt="">
@@ -106,9 +107,10 @@
                             <i class="fa-solid fa-ellipsis-vertical"></i>
                         </div>
                     </div>
-        
+
                     <!-- Bank Deposit -->
-                    <div class="flex justify-between items-center bg-white border-l-4 border-blue-500 px-4 py-3 rounded-md shadow-md">
+                    <div
+                        class="flex justify-between items-center bg-white border-l-4 border-blue-500 px-4 py-3 rounded-md shadow-md">
                         <div class="flex items-center gap-4">
                             <div class="bg-gray-100 p-3 rounded-full">
                                 <img class="w-[25px]" src="./assets/wallet1.png" alt="">
@@ -122,9 +124,10 @@
                             <i class="fa-solid fa-ellipsis-vertical"></i>
                         </div>
                     </div>
-        
+
                     <!-- Mobile Recharge -->
-                    <div class="flex justify-between items-center bg-white border-l-4 border-green-500 px-4 py-3 rounded-md shadow-md">
+                    <div
+                        class="flex justify-between items-center bg-white border-l-4 border-green-500 px-4 py-3 rounded-md shadow-md">
                         <div class="flex items-center gap-4">
                             <div class="bg-gray-100 p-3 rounded-full">
                                 <img class="w-[25px]" src="./assets/wallet1.png" alt="">
@@ -138,9 +141,10 @@
                             <i class="fa-solid fa-ellipsis-vertical"></i>
                         </div>
                     </div>
-        
+
                     <!-- Gas Bill -->
-                    <div class="flex justify-between items-center bg-white border-l-4 border-red-500 px-4 py-3 rounded-md shadow-md">
+                    <div
+                        class="flex justify-between items-center bg-white border-l-4 border-red-500 px-4 py-3 rounded-md shadow-md">
                         <div class="flex items-center gap-4">
                             <div class="bg-gray-100 p-3 rounded-full">
                                 <img class="w-[25px]" src="./assets/wallet1.png" alt="">
@@ -157,7 +161,7 @@
                 </div>
             </div>
         </section>
-        
+
 
         <!--add money section-->
         <section id="addmoney" class="mt-10 mx-4">
@@ -171,7 +175,7 @@
                             <legend class="font-semibold text-lg mb-2">Select A Bank</legend>
 
                             <!-- Select Bank Dropdown -->
-                            <select class="select select-bordered w-full bg-white border border-gray-400 mb-4">
+                            <select id="allbank" class="select select-bordered w-full bg-white border border-gray-400 mb-4">
                                 <option disabled selected>Select bank</option>
                                 <option value="Bkash">Bkash</option>
                                 <option value="Nagad">Nagad</option>
@@ -257,197 +261,144 @@
         <!-- Transfer Money -->
         <section id="transferMoney" class="mt-10 mx-4">
             <h2 class="text-xl font-bold mb-4 text-[#080808E6]">Transfer Money</h2>
-        
+
             <!-- Form Container -->
             <div class="flex justify-center">
                 <div class="hero-content flex-col lg:flex-row-reverse w-full max-w-md">
                     <div class="card w-full shadow-2xl p-6">
                         <div class="card-body">
                             <legend class="font-semibold text-lg mb-2">Enter Transfer Details</legend>
-        
+
                             <!-- Input Fields -->
                             <fieldset class="space-y-3">
                                 <label class="font-medium">User Account Number</label>
                                 <input value="01813606468" id="userNumber" type="text"
                                     class="input input-bordered w-full bg-white border-gray-400"
                                     placeholder="Enter account number" required />
-        
+
                                 <label class="font-medium">Amount</label>
                                 <input id="transferAmount" type="number"
                                     class="input input-bordered w-full bg-white border-gray-400"
                                     placeholder="Add Amount to withdraw" required />
-        
+
                                 <label class="font-medium">Pin Number</label>
                                 <input value="1234" id="transferPin" type="password"
                                     class="input input-bordered w-full bg-white border-gray-400"
                                     placeholder="Enter 4 digit pin number" required />
-        
+
                                 <!-- Forgot Password Link -->
                                 <div class="mt-2">
                                     <a href="#" class="link link-hover text-blue-600">Forgot your pin?</a>
                                 </div>
-        
+
                                 <!-- Submit Button -->
                                 <button id="transfer" type="submit"
-                                    class="btn btn-neutral bg-blue-700 text-white mt-4 w-full rounded-3xl">Send Now</button>
+                                    class="btn btn-neutral bg-blue-700 text-white mt-4 w-full rounded-3xl">Send
+                                    Now</button>
                             </fieldset>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        
 
 
-         <!-- Get Bonus -->
-         <section id="getBonus" class="mt-10 mx-4">
+
+        <!-- Get Bonus -->
+        <section id="getBonus" class="mt-10 mx-4">
             <h2 class="text-xl font-bold mb-4 text-[#080808E6]">Get Bonus</h2>
-        
+
             <!-- Form Container -->
             <div class="flex justify-center">
                 <div class="hero-content flex-col lg:flex-row-reverse w-full max-w-md">
                     <div class="card w-full shadow-2xl p-6">
                         <div class="card-body">
                             <legend class="font-semibold text-lg mb-2">Enter Bonus Details</legend>
-        
+
                             <!-- Input Fields -->
                             <fieldset class="space-y-3">
                                 <label class="font-medium">Enter Bonus Coupon</label>
                                 <input id="bonusCoupon" value="RIJOAN$100" type="text"
                                     class="input input-bordered w-full bg-white border-gray-400"
                                     placeholder="Enter your coupon code" required />
-        
+
                                 <!-- Submit Button -->
                                 <button id="get" type="submit"
-                                    class="btn btn-neutral bg-blue-700 text-white mt-4 w-full rounded-3xl">Get Bonus</button>
+                                    class="btn btn-neutral bg-blue-700 text-white mt-4 w-full rounded-3xl">Get
+                                    Bonus</button>
                             </fieldset>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        
 
 
 
-          <!-- Pay Bill -->
-          <section id="payBill" class="mt-10 mx-4">
+
+        <!-- Pay Bill -->
+        <section id="payBill" class="mt-10 mx-4">
             <h2 class="text-xl font-bold mb-4 text-[#080808E6]">Pay Bill</h2>
-        
+
             <!-- Form Container -->
             <div class="flex justify-center">
                 <div class="hero-content flex-col lg:flex-row-reverse w-full max-w-md">
                     <div class="card w-full shadow-2xl p-6">
                         <div class="card-body">
                             <legend class="font-semibold text-lg mb-2">Bill Payment Details</legend>
-        
+
                             <!-- Input Fields -->
                             <fieldset class="space-y-3">
                                 <label class="font-medium">Select Bill Type</label>
-                                <select id="Paybank" class="select select-bordered w-full bg-white border-gray-400" required>
+                                <select id="Paybank" class="select select-bordered w-full bg-white border-gray-400"
+                                    required>
                                     <option disabled selected>Select</option>
                                     <option>Wifi Bill</option>
                                     <option>Current Bill</option>
                                     <option>Gas Bill</option>
                                 </select>
-        
+
                                 <label class="font-medium">Biller Account Number</label>
                                 <input id="PayaddMoneyNumber" type="text" value="01637856264"
                                     class="input input-bordered w-full bg-white border-gray-400"
                                     placeholder="Enter account number" required />
-        
+
                                 <label class="font-medium">Amount to Pay</label>
                                 <input id="Payamount" type="text"
                                     class="input input-bordered w-full bg-white border-gray-400"
                                     placeholder="Enter amount" required />
-        
+
                                 <label class="font-medium">Pin Number</label>
                                 <input id="PayaddMoneyPin" type="password" value="1234"
                                     class="input input-bordered w-full bg-white border-gray-400"
                                     placeholder="Enter 4-digit PIN" required />
-        
+
                                 <!-- Submit Button -->
                                 <button id="payBillBtn" type="submit"
-                                    class="btn btn-neutral bg-blue-700 text-white mt-4 w-full rounded-3xl">Pay Now</button>
+                                    class="btn btn-neutral bg-blue-700 text-white mt-4 w-full rounded-3xl">Pay
+                                    Now</button>
                             </fieldset>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        
+
 
 
         <!-- Transaction History part-->
-        
-        <section id="TransactionHistory" class="mt-10 mx-4">
-            <div>
-                <div class="flex justify-between items-center">
-                    <h2 class="text-[18px] font-[600] ">Transaction History</h2>
-                    <p class="font-[400] text-[14px] opacity-70 cursor-pointer">View All</p>
-                </div>
+        <section id="TransactionHistory" class="mt-10 mx-4 relative top-0 right-0">
+            <h1 class="text-3xl font-bold text-red-400 text-center p-3">Transaction History</h1>
 
-                <div class="mt-5 flex flex-col gap-4">
-                    <div class="flex justify-between items-center text-white px-4 py-2 rounded-md shadow-sm bg-red-700">
-                        <div class="flex items-center gap-6">
-                            <div class="bg-white p-3 rounded-full">
-                                <img class="w-[25px]" src="./assets/transaction1.png" alt="">
-                            </div>
-                            <div>
-                                <h3 class="text-[18px] font-[600] ">Cash Out</h3>
-                                <p class="text-[14px] text-[400] opacity-90">Agent Number : 01876237812</p>
-                                <p class="text-[14px] text-[400] opacity-90">Amount : $230</p>
-                                <p class="text-[12px] opacity-80 font-[400]">02/24/2025 10:50 PM</p>
-                            </div>
-                        </div>
-                        <div class="cursor-pointer ">
-                            <i class="fa-solid fa-trash"></i>
-                        </div>
-                    </div>
-                    <div
-                        class="flex justify-between items-center text-white px-4 py-2 rounded-md shadow-sm bg-green-700">
-                        <div class="flex items-center gap-6">
-                            <div class="bg-white p-3 rounded-full">
-                                <img class="w-[25px]" src="./assets/transaction1.png" alt="">
-                            </div>
-                            <div>
-                                <h3 class="text-[18px] font-[600] ">Add Money</h3>
-                                <p class="text-[14px] text-[400] opacity-90">Bank : City Bank</p>
-                                <p class="text-[14px] text-[400] opacity-90">Amount : $60000</p>
-                                <p class="text-[12px] opacity-80 font-[400]">02/24/2025 10:30 PM</p>
-                            </div>
-                        </div>
-                        <div class="cursor-pointer">
-                            <i class="fa-solid fa-trash"></i>
-                        </div>
-                    </div>
+           <div id="transection-container">
 
-                    <div class="flex justify-between items-center text-white px-4 py-2 rounded-md shadow-sm bg-red-700">
-                        <div class="flex items-center gap-6">
-                            <div class="bg-white p-3 rounded-full">
-                                <img class="w-[25px]" src="./assets/transaction1.png" alt="">
-                            </div>
-                            <div>
-                                <h3 class="text-[18px] font-[600] ">Pay Bill</h3>
-                                <p class="text-[14px] text-[400] opacity-90">Bill : Gas Bill</p>
-                                <p class="text-[14px] text-[400] opacity-90">Biller Number : 01637856264</p>
-                                <p class="text-[14px] text-[400] opacity-90">Amount : $100</p>
-                                <p class="text-[12px] opacity-80 font-[400]">02/24/2025 10:30 PM</p>
-                            </div>
-                        </div>
-                        <div class="cursor-pointer">
-                            <i class="fa-solid fa-trash"></i>
-                        </div>
-                    </div>
-                </div>
-                <div id="history" class="flex flex-col gap-4 mt-4">
-
-                </div>
-            </div>
+           </div>
         </section>
+        
 
     </header>
 
+    
 
 
     <!-- added all js file-->
